@@ -1,6 +1,6 @@
 Example Monero home screen:
 
-https://imgur.com/a/wOFhhZ1.jpg
+https://i.imgur.com/qAezO2a.png
 
 #Setup Instructions:
 
@@ -32,4 +32,18 @@ Your total XMR balance (mined and held):
 
 Your Total XMR balance in terms of USD:
 
-`Total USD: $mu(round,sh("curl -s https://supportxmr.com/api/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 * sh("curl -s https://api.coinmarketcap.com/v1/ticker/monero/ | grep --color=no price_usd | grep --color=no -Eo '[0-9.]+'") * 1,2)$`
+`Total USD: $mu(round,(sh("curl -s https://supportxmr.com/api/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 + <your wallet balance>) * sh("curl -s https://api.coinmarketcap.com/v1/ticker/monero/ | grep --color=no price_usd | grep --color=no -Eo '[0-9.]+'") * 1,2)$`
+
+Text box details:
+
+- Font: size 40
+
+- Color: FF000000
+
+If anyone finds this cool/useful I always appreciate donations:
+
+XMR: 45d4VHWboXGV5sgvZ8hMFqdqnyku4vni33pbtMEFMGVk7ZcsHbwKepUFvhNsVEEu4Gd4F6KpJPZ1JZjSXUMY6eA7KJZA75P
+
+BTC: 1HqWUi2KVF5WZ2meJcYcnCmyua3SrMubNC
+
+ETH: 0x20cb37136936ee535bde314036e73a99d70c1566
