@@ -4,7 +4,7 @@ Customized with background images and live updates for prices and mining results
 
 Examples:
 
-https://i.imgur.com/qAezO2a.png
+![Monero Background](https://i.imgur.com/qAezO2a.png)
 
 If anyone finds this useful/cool I always appreciate donations:
 

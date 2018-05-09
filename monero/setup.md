@@ -1,12 +1,12 @@
 Example Monero home screen:
 
-https://i.imgur.com/qAezO2a.png
+![Monero Home Screen](https://i.imgur.com/qAezO2a.png)
 
 #Setup Instructions:
 
 1) Download the KWGT app from the play store. The free version will work fine
 
-2) Download the following image: https://imgur.com/a/wOFhhZ1.jpg to use as your background
+2) Download the following image: https://i.imgur.com/BqrkIgg.png to use as your background
 
 3) Place a new KWGT widget on your home screen, wherever you want it
 
