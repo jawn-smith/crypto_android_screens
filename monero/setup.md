@@ -36,7 +36,7 @@ Your Total XMR balance in terms of USD:
 
 Text box details:
 
-- Font: size 40
+- Font: Roboto Regular, size 40
 
 - Color: FF000000
 
