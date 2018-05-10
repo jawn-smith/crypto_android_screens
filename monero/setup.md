@@ -30,13 +30,23 @@ Check the hashrate of an xmr-stak mining rig:
 
 `Hashrate: $mu(round,sh("curl -s http://<your mining rig address>/api.json | sed 's/,/\n/g' | grep total | grep -v '_' | grep -Eo '[0-9.]+'") * 1)$ H/s`
 
-Your total XMR balance (mined and held):
+Your total XMR balance (mined and held, supportXMR):
 
 `Total XMR: $mu(round,sh("curl -s https://supportxmr.com/api/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 + <Your wallet balance>,4)$`
 
-Your Total XMR balance in terms of USD:
+Your total XMR balance (mined and held, MoneroOcean):
+
+`Total XMR: $mu(round,sh("curl -s https://api.moneroocean.stream/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 + <Your wallet balance>,4)$`
+
+Your Total XMR balance in terms of USD (with supportXMR):
 
 `Total USD: $mu(round,(sh("curl -s https://supportxmr.com/api/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 + <your wallet balance>) * sh("curl -s https://api.coinmarketcap.com/v1/ticker/monero/ | grep --color=no price_usd | grep --color=no -Eo '[0-9.]+'") * 1,2)$`
+
+Your Total XMR balance in terms of USD (with MoneroOcean):
+
+`Total USD: $mu(round,(sh("curl -s https://api.moneroocean.com/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001 + <your wallet balance>) * sh("curl -s https://api.coinmarketcap.com/v1/ticker/monero/ | grep --color=no price_usd | grep --color=no -Eo '[0-9.]+'") * 1,2)$`
+
+You can feel free to take the mining stats out of any of these and just use price and balance updates.
 
 Text box details:
 
