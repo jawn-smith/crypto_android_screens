@@ -22,6 +22,10 @@ Getting amount due from supportxmr.com:
 
 `Mined: $mu(round,sh("curl -s https://supportxmr.com/api/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001,4)$`
 
+Getting amount due from MoneroOcean.stream:
+
+`Mined: $mu(round,sh("curl -s https://api.moneroocean.stream/miner/<insert your wallet address>/stats | sed 's/,/\n/g' | grep amtDue | grep -Eo '[0-9]+'",600) * 0.000000000001,4)$`
+
 Check the hashrate of an xmr-stak mining rig:
 
 `Hashrate: $mu(round,sh("curl -s http://<your mining rig address>/api.json | sed 's/,/\n/g' | grep total | grep -v '_' | grep -Eo '[0-9.]+'") * 1)$ H/s`
